@@ -21,18 +21,6 @@ class EarningSeeder extends Seeder
                 'active' => true,
                 'is_taxable' => true,
             ],
-            [
-                'name' => 'Commission',
-                'acronym' => 'CO',
-                'active' => true,
-                'is_taxable' => false,
-            ],
-            [
-                'name' => 'Adjustments',
-                'acronym' => 'AD',
-                'active' => false,
-                'is_taxable' => true,
-            ],
         ];
 
         Earning::insert($data);

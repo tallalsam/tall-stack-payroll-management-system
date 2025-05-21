@@ -9,10 +9,13 @@ use App\Models\User;
 class Role extends LaratrustRole
 {
     use HasFactory;
-    
+
     const ADMINISTRATOR_ID = 1;
-    const TIMEKEEPER_ID = 2;
-    
+
+    const EMPLOYEE_ID = 2;
+
+    const ACCOUNTANT_ID = 3;
+
     public $guarded = [];
 
     public function users()

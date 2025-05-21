@@ -15,6 +15,12 @@ class CompanyInformationSeeder extends Seeder
     public function run(CompanyInformation $companyInformation)
     {
         CompanyInformation::truncate();
-        CompanyInformation::factory(1)->create();
+//        CompanyInformation::factory(1)->create();
+        CompanyInformation::insert([
+            'name' => 'Techsila Pvt Limited',
+            'address' => '10 Burlington Mall Road #3030, Burlington, MA 01803, USA',
+            'phone' => '978-20219-2308',
+            'email' => 'info@techsila.io',
+        ]);
     }
 }

@@ -19,15 +19,23 @@ class DepartmentSeeder extends Seeder
         $data = [
             [
                 'id' => 1,
-                'department_name' => 'Construction',
+                'department_name' => 'Web & Software Development',
             ],
             [
                 'id' => 2,
-                'department_name' => 'Human Resource',
+                'department_name' => 'Quality Assurance',
             ],
             [
                 'id' => 3,
-                'department_name' => 'Information Technology',
+                'department_name' => 'Business Development',
+            ],
+            [
+                'id' => 4,
+                'department_name' => 'Human Resource',
+            ],
+            [
+                'id' => 5,
+                'department_name' => 'Accounts',
             ]
         ];
         Department::insert($data);

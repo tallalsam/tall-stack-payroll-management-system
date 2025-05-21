@@ -110,7 +110,7 @@ class ProjectComponent extends Component
         } elseif($this->newPage == 2)
         {
             $this->newPage += 1;
-        } elseif($this->newPage == 3) 
+        } elseif($this->newPage == 3)
         {
             $this->emit('closeNewProjectModal');
 
@@ -121,8 +121,8 @@ class ProjectComponent extends Component
 
                 $this->profile_photo_path->storeAs('public/img/projects', $imageFileName);
             }
-           
-            
+
+
             $new_project = new Project;
             $new_project->name = $this->name;
             $new_project->code = $this->code;
@@ -143,11 +143,11 @@ class ProjectComponent extends Component
             $this->newPage = 1;
 
         }
-        
-        
-        
 
-       
+
+
+
+
     }
 
     public function backPage()
@@ -158,7 +158,7 @@ class ProjectComponent extends Component
         } else {
             $this->newPage -= 1;
         }
-        
+
     }
 
     public function clearNewProjectForm()
@@ -177,8 +177,11 @@ class ProjectComponent extends Component
     public function updatedAutoGenerateCode()
     {
         $latest_project = Project::orderBy('code', 'desc')->first();
-        $latest_code = $latest_project->code;
-        $last_digits = substr($latest_code, 6) + 1;
-        $this->code = Carbon::now()->format('Y') . "-" . sprintf('%04d', $last_digits);
+        if($latest_project) {
+            $latest_code = $latest_project->code;
+            $last_digits = substr($latest_code, 6) + 1;
+            $this->code = Carbon::now()->format('Y') . "-" . sprintf('%04d', $last_digits);
+        }
+
     }
 }

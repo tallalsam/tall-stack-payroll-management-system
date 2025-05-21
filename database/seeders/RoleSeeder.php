@@ -20,12 +20,18 @@ class RoleSeeder extends Seeder
                 'id' => Role::ADMINISTRATOR_ID,
                 'name' => 'administrator',
                 'display_name' => 'Administrator',
-                'description' => 'Vestibulum efficitur nulla lectus, id euismod diam rhoncus vitae. ',
+                'description' => '',
             ], [
-                'id' => Role::TIMEKEEPER_ID,
-                'name' => 'timekeeper',
-                'display_name' => 'Timekeeper',
-                'description' => 'Phasellus sem lectus, imperdiet at fermentum sit amet, molestie et urna. ',
+                'id' => Role::EMPLOYEE_ID,
+                'name' => 'employee',
+                'display_name' => 'Employee',
+                'description' => '',
+            ],
+            [
+                'id' => Role::ACCOUNTANT_ID,
+                'name' => 'accountant',
+                'display_name' => 'Accountant',
+                'description' => '',
             ]
         ];
 
